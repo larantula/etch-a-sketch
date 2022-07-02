@@ -1,10 +1,16 @@
+:root{
+    --container-grid-template-columns: 16;
+
+}
+
 #container{
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
+    grid-template-columns: repeat(var(--container-grid-template-columns)
+        , 1fr);
     /*
     grid-gap: 1px;
     */
-  }
+}
 
 
 .grid{
@@ -14,7 +20,6 @@
     border: solid;
     border-color: black;
     width: 100%;
-    aspect-ratio: 1/1;
 
 }
 
@@ -27,13 +32,14 @@
 .grid.permahover{
     display: block;
 }
+*/
 
 .grid:after{
     content: "";
     display: block;
     padding-bottom: 100%;
 }
-*/
+
 
 
 
